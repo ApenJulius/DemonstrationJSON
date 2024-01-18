@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+#top-text {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    line-height: 5rem;
+
+}
+
+form, #avatar {
+    margin: 1rem 0;
+}
+#input {
+    all:unset;
+    width: 26rem;
+    height: 3rem;
+    border-radius: 17px;
+    background-color: gray;
+    box-shadow: 0 0 1000px 40px whitesmoke;
+    color: black;
+    text-indent: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: 600;
+    border: 1px solid whitesmoke;
+    animation: appear 1s forwards;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+#input::placeholder {
+    color: black;
+}
+
+@keyframes appear {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        width: 1;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.processing {
+    animation: hide 1s forwards;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(0, -50%);
+}
